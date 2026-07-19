@@ -1,0 +1,28 @@
+# Qt Creator & Build output
+/build/
+*.pro.user
+*.pro.user.*
+CMakeLists.txt.user
+CMakePresets.json.user
+
+# MSVC/MinGW compiled objects and executables
+*.o
+*.obj
+*.exe
+*.pdb
+*.ilk
+Debug/
+Release/
+x64/
+x86/
+
+# IDE settings
+.vs/
+.qtcreator/
+.idea/
+.vscode/
+
+# OS/Temp
+*~
+.DS_Store
+Thumbs.db
