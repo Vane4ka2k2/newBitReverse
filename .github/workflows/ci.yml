@@ -1,4 +1,4 @@
-﻿name: Qt Build CI
+name: Qt Build CI
 
 on:
   push:
@@ -8,12 +8,8 @@ on:
 
 jobs:
   build:
-    name: Build Qt (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+    name: Build Qt (windows-latest)
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
