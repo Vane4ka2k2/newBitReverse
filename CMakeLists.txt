@@ -14,24 +14,24 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets Multimed
 find_package(OpenMP)
 
 set(SOURCES
-    main.cpp
-    MainWindow.cpp
-    cpp/Image.cpp
+    src/main.cpp
+    src/MainWindow.cpp
+    src/Image.cpp
 )
 
 set(HEADERS
-    MainWindow.h
-    ProcessorWorker.h
-    h/Image.h
-    h/stb_image.h
-    h/stb_image_write.h
+    include/MainWindow.h
+    include/ProcessorWorker.h
+    include/Image.h
+    third_party/stb/stb_image.h
+    third_party/stb/stb_image_write.h
 )
 
 add_executable(SobelCam-Qt ${SOURCES} ${HEADERS})
 
 target_include_directories(SobelCam-Qt PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/h
+    include
+    third_party/stb
 )
 
 target_link_libraries(SobelCam-Qt PRIVATE
