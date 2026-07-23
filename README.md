@@ -33,12 +33,12 @@
 
 ## 🏗 Архитектура приложения
 
-`mermaid
+```mermaid
 flowchart LR
     A[QCamera / QMediaCaptureSession] -->|Видеокадры| B[ProcessorWorker Thread]
     B -->|OpenMP Алгоритмы Собеля| C[QImage Result]
     C -->|Сигнал frameProcessed| D[MainWindow UI]
-`
+```
 
 ---
 
@@ -51,18 +51,18 @@ flowchart LR
 - Поддержка OpenMP (опционально)
 
 ### Сборка через CMake:
-`ash
+```bash
 git clone https://github.com/Vane4ka2k2/SobelCam-Qt.git
 cd SobelCam-Qt
 cmake -B build
 cmake --build build
-`
+```
 
 ---
 
 ## 📁 Структура проекта
 
-`	ext
+```text
 SobelCam-Qt/
 ├── cpp/               # Исходные файлы алгоритмов
 ├── h/                 # Заголовочные файлы и stb_image
@@ -71,7 +71,7 @@ SobelCam-Qt/
 ├── CMakeLists.txt     # Скрипт сборки CMake
 ├── LICENSE            # Лицензия MIT
 └── README.md          # Документация
-`
+```
 
 ---
 
